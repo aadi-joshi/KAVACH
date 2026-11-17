@@ -86,6 +86,14 @@ export const GLOSSARY: Record<string, GlossaryEntry> = {
     body: "A short spoken instruction in Marathi, Hindi or English, generated from the finished shift plan and read to the supervisor.",
     example: "It only uses times, water volumes and work windows the engines already calculated.",
   },
+  nugen: {
+    body: "A language model from Nugen Intelligence that has been aligned (further trained) for a specific domain. In KAVACH it only turns a finished plan into sentences and answers questions about it.",
+    example: "It never sees a choice to make. The work windows, water and limits are already fixed before it is asked to write anything.",
+  },
+  factLock: {
+    body: "An automatic check on everything the language model writes. Every number and time in its text must already exist in the plan, and every work window must be mentioned — otherwise the text is thrown away and the plain template is used instead.",
+    example: "If the model wrote “work until 13:00” on a day the plan stops at 10:00, the briefing would be rejected before anyone saw it.",
+  },
   meanRadiant: {
     body: "How much heat a worker absorbs by radiation — from the sun above and from hot surfaces around them.",
     example: "It is why standing on dark asphalt in direct sun feels far hotter than the air temperature alone.",

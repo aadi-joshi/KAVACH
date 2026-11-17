@@ -8,6 +8,7 @@ const LINKS = [
   { href: "/console", label: "Console" },
   { href: "/sites", label: "Sites" },
   { href: "/ledger", label: "Compliance" },
+  { href: "/impact", label: "Impact" },
   { href: "/how-it-works", label: "How it works" },
 ];
 

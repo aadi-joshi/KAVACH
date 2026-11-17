@@ -63,9 +63,24 @@ const STAGES = [
     title: "Say it in a language the supervisor uses",
     lede: "A plan written in English on a dashboard nobody opens is not a plan.",
     body: [
-      "The finished schedule is turned into a short spoken briefing in Marathi, Hindi or English, and read aloud. It is sent to the supervisor's phone; they confirm, and the municipal ledger records it.",
-      "The briefing only uses times, temperatures and water volumes the engines already calculated. It cannot invent a work window or change a safety limit.",
+      "The finished schedule is turned into a short spoken briefing in Marathi, Hindi or English by a Nugen aligned language model, and read aloud. It is sent to the supervisor's phone; they confirm, and the municipal ledger records it.",
+      "The briefing only uses times, temperatures and water volumes the engines already calculated. It cannot invent a work window or change a safety limit — and the section below explains how that is enforced rather than hoped for.",
     ],
+  },
+];
+
+const NUGEN_ROLES = [
+  {
+    title: "The engines decide",
+    body: "Work windows, the stand-down, water per person and the safe limit all come from the four engines in steps 1 to 4. The model is handed the finished plan as a fact sheet. It is never asked what the crew should do.",
+  },
+  {
+    title: "The model phrases and answers",
+    body: "It turns that fact sheet into a short spoken briefing in Marathi, Hindi or English, and answers a supervisor's follow-up questions — “can we work after lunch?” — using only the same facts.",
+  },
+  {
+    title: "The fact-lock checks every number",
+    body: "Before anything the model writes is shown, a plain program pulls out every number and time in it — including Devanagari digits — and checks each one against the plan. It also checks that every work window and the water volume are there. One invented or missing number and the model's text is thrown away; the deterministic template is shown instead, with the reason.",
   },
 ];
 
@@ -118,6 +133,35 @@ export default function HowItWorksPage() {
             </li>
           ))}
         </ol>
+
+        {/* ---- The language model ---- */}
+        <section className="mt-12 border-t border-[var(--color-rule)] pt-8">
+          <h2 className="font-[family-name:var(--font-display)] text-[22px]">
+            Where the language model sits
+          </h2>
+          <p className="mt-2 max-w-[62ch] text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">
+            KAVACH uses an aligned language model from Nugen Intelligence — a model
+            further trained for a specific domain. It sits at the very end of the pipeline,
+            after every decision has been made, and it has exactly two jobs.
+          </p>
+          <ol className="mt-6 space-y-4">
+            {NUGEN_ROLES.map((r) => (
+              <li key={r.title} className="border-l-2 border-[var(--color-rule-strong)] pl-4">
+                <div className="text-[14px] font-semibold">{r.title}</div>
+                <p className="mt-1 max-w-[60ch] text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">
+                  {r.body}
+                </p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-6 max-w-[62ch] text-[13.5px] leading-relaxed text-[var(--color-ink-muted)]">
+            You can check this on the console. The briefing panel has a{" "}
+            <strong className="text-[var(--color-ink)]">Phrasing: Nugen / Template</strong>{" "}
+            switch. Flip it and the wording changes; the schedule line beneath it does not
+            move, because the model never had a say in it. If no model is configured, or it
+            does not answer in time, the panel says so and uses the template.
+          </p>
+        </section>
 
         {/* ---- Zones ---- */}
         <section className="mt-12 border-t border-[var(--color-rule)] pt-8">
@@ -229,5 +273,7 @@ const TERM_TITLES: Record<string, string> = {
   shram: "SHRAM",
   unmanaged: "A normal day",
   briefing: "The briefing",
+  nugen: "Nugen aligned model",
+  factLock: "Fact-lock",
   meanRadiant: "Radiant heat",
 };
