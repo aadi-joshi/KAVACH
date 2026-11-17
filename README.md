@@ -3,7 +3,7 @@
 **Turns a heat forecast into a safe, productive shift plan for one work site — by
 simulating what the day will do to a worker's body.**
 
-Team **Brawlers** — Aadi Joshi · Atharva Gilbile · Hasan Rupawalla · Tanvesh Deshmukh
+Team **Brawless** — Aadi Joshi · Atharva Gilbile · Hasan Rupawalla · Tanvesh Deshmukh
 
 Built for the **Indradhanu 2026 International Grand Challenge**, PCCOE Pune. Theme: AI for
 Climate Change (UN SDG 13). Domain: disaster resilience, public health and community

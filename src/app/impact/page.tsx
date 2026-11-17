@@ -512,7 +512,7 @@ export default function ImpactPage() {
 
         {/* ---- (f) Team ---- */}
         <section className="mt-12 border-t border-[var(--color-rule)] pt-8">
-          <SectionHead kicker="Team" title="Brawlers">
+          <SectionHead kicker="Team" title="Brawless">
             Built for the Indradhanu 2026 International Grand Challenge at PCCOE Pune, under
             the theme AI for Climate Change (UN SDG 13).
           </SectionHead>

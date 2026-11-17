@@ -4,7 +4,7 @@ Best: one mp3 per clip (01.mp3 to 11.mp3). One long mp3 also works.
 Brand names are written the way they're said (Kavach, Shram, Chaitra), so the voice won't spell them out.
 
 01 @ 0:00 (max 40 s)
-Hi, we're team Brawlers, and this is Kavach.
+Hi, we're team Brawless, and this is Kavach.
 Six in the morning, Pune. Rajesh, a site supervisor, has forty-two workers at the gate, and the forecast says thirty-six degrees. But that doesn't answer his real question: can his crew work today, and for how long?
 Three hundred and eighty million Indians work in heat like this. It costs them about seventy-eight billion dollars a year in lost wages, and in extreme heat, heavy work can turn dangerous within fourteen minutes. There are rules for this, but they're rarely followed, because stopping work looks like losing money.
 
@@ -41,4 +41,4 @@ Behind the scenes, Kavach runs four engines: site heat estimation, the body simu
 Because there's no hardware, adding a new site just means entering its location. It costs nothing per site, it works anywhere Shram has coverage, and it takes a supervisor about ten seconds each morning. Labour departments get proof that safety rules are being followed, contractors get more work done, and rural NREGA worksites get it for free.
 
 11 @ 5:45 (max 15 s)
-India already has the heat data. Kavach makes the heat decision. We're team Brawlers: Aadi, Atharva, Hasan, and Tanvesh. Thank you.
+India already has the heat data. Kavach makes the heat decision. We're team Brawless: Aadi, Atharva, Hasan, and Tanvesh. Thank you.

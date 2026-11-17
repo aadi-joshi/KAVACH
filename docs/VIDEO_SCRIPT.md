@@ -1,6 +1,6 @@
 # KAVACH demo video script (6:00)
 
-Team **Brawlers**: Aadi Joshi · Atharva Gilbile · Hasan Rupawalla · Tanvesh Deshmukh
+Team **Brawless**: Aadi Joshi · Atharva Gilbile · Hasan Rupawalla · Tanvesh Deshmukh
 
 The narration is identical to [`video/VOICEOVER.txt`](../video/VOICEOVER.txt), the plain file for text-to-speech. This version adds what is on screen in `video/kavach_demo.mp4` at each point. Brand names are spelled the way they are spoken (Kavach, Shram, Chaitra).
 
@@ -9,7 +9,7 @@ The narration is identical to [`video/VOICEOVER.txt`](../video/VOICEOVER.txt), t
 ### 01 · 0:00 · Intro and the problem
 *On screen: 0:00 KAVACH title card · 0:06 Rajesh at the gate · 0:16 stat cards 380M / $78B / 14–32 min · 0:29 "the rules already exist"*
 
-Hi, we're team Brawlers, and this is Kavach.
+Hi, we're team Brawless, and this is Kavach.
 
 Six in the morning, Pune. Rajesh, a site supervisor, has forty-two workers at the gate, and the forecast says thirty-six degrees. But that doesn't answer his real question: can his crew work today, and for how long?
 
@@ -73,7 +73,7 @@ Because there's no hardware, adding a new site just means entering its location.
 ### 11 · 5:45 · Close
 *On screen: 5:45 "India has the heat data. KAVACH makes the heat decision." · team names*
 
-India already has the heat data. Kavach makes the heat decision. We're team Brawlers: Aadi, Atharva, Hasan, and Tanvesh. Thank you.
+India already has the heat data. Kavach makes the heat decision. We're team Brawless: Aadi, Atharva, Hasan, and Tanvesh. Thank you.
 
 ---
 
