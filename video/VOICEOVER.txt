@@ -1,39 +1,44 @@
 KAVACH demo voiceover, ready for text-to-speech.
-Eleven clips. Each one starts at the time shown and must finish before the next begins.
-Best: export one mp3 per clip (01.mp3 to 11.mp3). One long mp3 also works.
-Brand names are written the way they should be said (Kavach, Shram, Chaitra), so the voice doesn't spell them out letter by letter.
+Eleven clips. Each one starts at the time shown. They don't have to fill their slot, just finish before the next one starts.
+Best: one mp3 per clip (01.mp3 to 11.mp3). One long mp3 also works.
+Brand names are written the way they're said (Kavach, Shram, Chaitra), so the voice won't spell them out.
 
 01 @ 0:00 (max 40 s)
-Pune, May twentieth, six in the morning. Rajesh Pawar has forty-two workers at the gate of a construction site in Hadapsar, and the forecast says thirty-six degrees. But can his crew work today, and until when? The forecast doesn't say. Three hundred and eighty million Indians work in heat like this. It costs them about seventy-eight billion dollars a year in lost wages, and in the worst heat, a labourer can hit a dangerous body temperature in fourteen to thirty-two minutes. Maharashtra has rules for this, but nobody follows them, because stopping work feels like losing money.
+Hi, we're team Brawlers, and this is Kavach.
+Six in the morning, Pune. Rajesh, a site supervisor, has forty-two workers at the gate, and the forecast says thirty-six degrees. But that doesn't answer his real question: can his crew work today, and for how long?
+Three hundred and eighty million Indians work in heat like this. It costs them about seventy-eight billion dollars a year in lost wages, and in extreme heat, heavy work can turn dangerous within fourteen minutes. There are rules for this, but they're rarely followed, because stopping work looks like losing money.
 
 02 @ 0:40 (max 35 s)
-India actually has great heat data. IMD gives the forecast, Shram from UC Berkeley gives live heat stress for over eight hundred stations, and Chaitra maps it ward by ward. But they all stop at "here's the risk". Nobody answers the supervisor's question. Most teams stop at a red map or a heat score. We tell you the exact minute a body crosses the limit, we build the actual safe shift, and the AI only translates it. We're team Brawlers, and this is Kavach.
+India already has good heat data. IMD gives forecasts, Shram from UC Berkeley tracks heat stress live at over eight hundred stations, and Chaitra maps the risk ward by ward. But they all stop at telling you the risk. None of them tell Rajesh what to actually do.
+Kavach goes one step further. It predicts the exact minute a worker's body gets into danger, and builds a safe shift around it. Let's see it live.
 
 03 @ 1:15 (max 30 s)
-This is the supervisor console, and everything here is live. Eight hundred and thirty-five Shram stations, seventeen of them in Pune, pulled just minutes ago. The diamonds are work sites, and the dots are weather stations, coloured by heat danger. Let's plan against a real recorded May heatwave, at Magarpatta Site 7. And the answer comes first: work six to ten, stand down, and come back four to eight.
+This is the supervisor console, running on live data from eight hundred and thirty-five weather stations, seventeen in Pune. The diamonds are work sites, and the dots are stations, coloured by how dangerous the heat is.
+We'll use a real May heatwave day at Magarpatta. The answer is right at the top: work from six to ten, rest through the afternoon, and come back from four to eight.
 
 04 @ 1:45 (max 30 s)
-First problem, there's no weather station on this site. The grid forecast says about thirty-six degrees, but this site is mostly concrete, barely any trees, dark ground, and Kavach adds that up term by term. The site itself comes out above thirty-nine, hotter than any station would tell you. And we show which numbers we're less sure about, instead of hiding them.
+There's no weather station on this site, so Kavach estimates it. The forecast says about thirty-six degrees, but this site is mostly concrete with almost no trees, and that adds heat. So the site itself comes out above thirty-nine, hotter than any nearby station would show. And where we're less sure about a number, we say so.
 
 05 @ 2:15 (max 45 s)
-Now the main part. This red line is an ordinary nine-to-five day. Kavach runs ISO seventy-nine thirty-three, the international standard for heat strain, and simulates the worker's core body temperature, minute by minute. At twelve twenty, it crosses thirty-eight point five, and that's the exact minute someone starts heading towards heat stroke. The teal line is the plan Kavach built. Work six to ten, stand down through the worst of it, come back four to eight, and the body peaks at thirty-seven point two. It never even touches the limit. Underneath, you've got the hour-by-hour danger strip, the rest cycle, and how much water each worker needs.
+This is the heart of Kavach. The red line is a normal nine-to-five day. Using ISO seventy-nine thirty-three, the international standard for heat stress, Kavach simulates a worker's body temperature, minute by minute. At twelve twenty, it crosses thirty-eight point five degrees, where the risk of heat stroke begins.
+The teal line is Kavach's plan: work early, rest through the hottest hours, and come back in the evening. Body temperature peaks at thirty-seven point two, safely under the limit. Below that, you can see the danger level for each hour, the rest breaks, and how much water each worker needs.
 
 06 @ 3:00 (max 30 s)
-Now here's why a contractor will actually use this. Hours worked in zone five are mostly spent recovering, so they produce almost nothing. The ordinary day gets eighty-four real labour-hours, and breaks the safety limit twice. The Kavach day gets a hundred and five, with zero breaches, and it follows the legal SOP. So it's safer, and twenty-five percent more productive. Safety stops being a cost.
+And here's why contractors will actually use it. In extreme heat, workers spend most of each hour just recovering, so very little gets done. A normal day gives eighty-four real hours of work, and crosses the safety limit twice. Kavach's plan gives a hundred and five, with zero breaches, and it follows the state's rules. Safer, and twenty-five percent more productive.
 
 07 @ 3:30 (max 30 s)
-And we don't rig it. Let's switch to very heavy work. Now the ordinary day crosses the limit at nine thirty-six, just thirty-six minutes into the shift. Kavach recalculates everything live, and the honest answer is that only three and a half hours of heavy work is safe today, and it says that right on screen. Because a safety tool that only gives good news isn't a safety tool.
+We don't hide the hard cases either. If we switch to very heavy work, a normal day turns dangerous at nine thirty-six, just thirty-six minutes in. Kavach recalculates everything instantly, and tells you honestly that only three and a half hours of heavy work is safe today. A safety tool that only gives good news isn't really a safety tool.
 
-08 @ 4:00 (max 45 s, with a 3 second gap after "Marathi or Hindi")
-Now the plan has to reach Rajesh, who isn't going to read an English dashboard. So Nugen's aligned model turns it into a spoken briefing, in Marathi or Hindi.
+08 @ 4:00 (max 45 s, with a short pause after "Marathi or Hindi")
+Next, the plan has to reach Rajesh in his own language. Nugen's aligned model turns it into a spoken briefing, in Marathi or Hindi.
 [3 second pause]
-Switch the language and the words change, but the schedule never moves, because the AI never decides it. Every number it writes gets checked against the plan, the times, the litres, the zone, and if it invents even one, we throw it out and use the template. Rajesh confirms with one tap, and it lands in a compliance ledger the labour department can audit.
+But the AI never decides the schedule. Every number it says is checked against the plan, and if anything doesn't match, we fall back to a fixed template. Change the language, and only the words change, never the schedule. Rajesh confirms with one tap, and it's saved in a compliance record the labour department can check.
 
 09 @ 4:45 (max 30 s)
-Under the hood, it's four engines. Downscaling, the ISO seventy-nine thirty-three body model, the shift optimiser, and the Nugen briefing. No sensors, no wearables, no hardware anywhere. Our heat-index model matches Shram's own published danger zones about ninety percent of the time, and if the internet drops on site, it still plans from a cached snapshot.
+Behind the scenes, Kavach runs four engines: site heat estimation, the body simulation, the shift planner, and the Nugen briefing. It needs no sensors, no wearables, and no hardware at all. Our heat model matches Shram's official danger zones about ninety percent of the time, and it keeps working even if the internet goes down.
 
 10 @ 5:15 (max 30 s)
-And because there's no hardware, adding a new site just means typing in its coordinates. That's zero rupees per site, every district Shram covers from day one, and about ten seconds of a supervisor's morning. Labour departments get SOP compliance they can actually check, contractors get more work out of the same day, and NREGA sites get it for free.
+Because there's no hardware, adding a new site just means entering its location. It costs nothing per site, it works anywhere Shram has coverage, and it takes a supervisor about ten seconds each morning. Labour departments get proof that safety rules are being followed, contractors get more work done, and rural NREGA worksites get it for free.
 
 11 @ 5:45 (max 15 s)
-India already has the heat data. Kavach makes the heat decision. We're team Brawlers. Aadi, Atharva, Hasan, and Tanvesh. Thank you.
+India already has the heat data. Kavach makes the heat decision. We're team Brawlers: Aadi, Atharva, Hasan, and Tanvesh. Thank you.
