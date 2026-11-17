@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KAVACH video slides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,300;1,400&display=block" rel="stylesheet">
+<style>
+:root{
+  --bg:#13110e; --bg2:#1c1915; --paper:#f7f5f0; --muted:#a39d8f; --faint:#6f695d; --rule:#2e2a24;
+  --z1:#2f7d8c; --z2:#6f9a3f; --z3:#cfa116; --z4:#de7a1e; --z5:#c33f2c; --z6:#7d2018;
+  --safe:#4fa3b3; --danger:#e0553f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1536px;height:864px;overflow:hidden;background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+section{position:absolute;inset:0;display:none}
+section.on{display:block}
+.grain{position:absolute;inset:0;pointer-events:none;background:radial-gradient(1200px 700px at 70% 120%,rgba(195,63,44,.22),transparent 60%),radial-gradient(900px 600px at -10% -20%,rgba(47,125,140,.14),transparent 60%)}
+.ramp{display:flex;height:6px;border-radius:3px;overflow:hidden}
+.ramp i{flex:1}
+.ramp i:nth-child(1){background:var(--z1)}.ramp i:nth-child(2){background:var(--z2)}.ramp i:nth-child(3){background:var(--z3)}.ramp i:nth-child(4){background:var(--z4)}.ramp i:nth-child(5){background:var(--z5)}.ramp i:nth-child(6){background:var(--z6)}
+.a{opacity:0;animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+.f{opacity:0;animation:fade 1s ease forwards}
+.o{animation:out .7s ease forwards}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes out{to{opacity:0;transform:translateY(-14px)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes dash{to{stroke-dashoffset:0}}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--danger);margin-right:10px;animation:pulse 1.4s infinite;vertical-align:1px}
+.wrap{position:absolute;left:120px;right:120px;top:0;bottom:0}
+.frame{position:absolute;inset:0}
+
+/* ---------- intro ---------- */
+#intro .t1{position:absolute;left:0;top:250px}
+#intro .logo{font-size:150px;font-weight:300;letter-spacing:.06em;line-height:1}
+#intro .sub{font-size:30px;color:var(--muted);margin-top:22px;font-weight:300}
+#intro .ramp{width:560px;margin-top:40px;transform-origin:left;animation:grow 1.6s cubic-bezier(.2,.7,.2,1) .6s both}
+#intro .team{margin-top:34px}
+.story{position:absolute;left:0;top:200px;width:1200px}
+.story .big{font-size:84px;line-height:1.08;font-weight:300}
+.story .big em{font-style:italic;color:var(--z4)}
+.story .line{font-size:34px;color:var(--muted);margin-top:26px;font-weight:300}
+.stats{position:absolute;left:0;right:0;top:250px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.stat{border-top:2px solid var(--rule);padding-top:24px}
+.stat .n{font-size:104px;font-weight:300;line-height:1;letter-spacing:-.02em}
+.stat .d{font-size:24px;color:var(--muted);margin-top:18px;line-height:1.35}
+.stat .s{font-size:13px;color:var(--faint);margin-top:14px;letter-spacing:.08em;text-transform:uppercase}
+.strike{position:relative;display:inline-block}
+.strike:after{content:"";position:absolute;left:-4px;right:-4px;top:54%;height:5px;background:var(--danger);transform-origin:left;transform:scaleX(0);animation:grow .7s ease forwards;animation-delay:inherit}
+
+/* ---------- stack ---------- */
+.h2{font-size:54px;font-weight:300;line-height:1.1}
+.h2 em{font-style:italic;color:var(--z4)}
+.ladder{margin-top:44px;display:flex;flex-direction:column;gap:14px}
+.rung{display:grid;grid-template-columns:240px 1fr 360px;align-items:center;gap:30px;padding:20px 28px;border:1px solid var(--rule);border-radius:14px;background:rgba(255,255,255,.02)}
+.rung .who{font-size:28px}
+.rung .who small{display:block;font-size:14px;color:var(--faint);margin-top:4px;font-family:"IBM Plex Sans";letter-spacing:.02em}
+.rung .q{font-size:27px;font-weight:300}
+.rung .stop{font-family:"IBM Plex Mono";font-size:15px;color:var(--muted);text-align:right;letter-spacing:.06em}
+.rung.k{border-color:var(--danger);background:linear-gradient(90deg,rgba(195,63,44,.16),rgba(47,125,140,.10))}
+.rung.k .q{color:var(--paper);font-weight:400}
+.rung.k .stop{color:var(--safe)}
+table.cmp{width:100%;border-collapse:collapse;margin-top:34px;font-size:20px}
+table.cmp th{font-family:"IBM Plex Mono";font-weight:500;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);text-align:left;padding:0 18px 14px}
+table.cmp td{padding:15px 18px;border-top:1px solid var(--rule);vertical-align:top;line-height:1.35}
+table.cmp td:first-child{color:var(--muted);width:230px}
+table.cmp td:nth-child(2){color:var(--faint);width:300px}
+table.cmp td:nth-child(3) b{color:var(--paper);font-weight:500}
+table.cmp td:nth-child(3){color:#d8d3c7}
+.bumper{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg)}
+.bumper .logo{font-size:120px;font-weight:300;letter-spacing:.06em}
+
+/* ---------- engines ---------- */
+.flow{position:absolute;left:0;right:0;top:250px;height:420px}
+.node{position:absolute;width:250px;padding:22px 22px 20px;border:1px solid var(--rule);border-radius:16px;background:var(--bg2)}
+.node .n{font-family:"IBM Plex Mono";font-size:13px;color:var(--faint);letter-spacing:.14em}
+.node .t{font-size:25px;margin-top:8px}
+.node .d{font-size:16px;color:var(--muted);margin-top:10px;line-height:1.4}
+.node.in{width:230px;border-style:dashed}
+.node.hero{border-color:var(--danger)}
+.node.ai{border-color:var(--safe)}
+.chips{position:absolute;left:0;right:0;bottom:70px;display:flex;gap:14px;flex-wrap:wrap}
+.chip{border:1px solid var(--rule);border-radius:999px;padding:10px 20px;font-size:18px;color:#d8d3c7}
+.chip b{color:var(--paper);font-weight:500}
+
+/* ---------- impact ---------- */
+.kpis{position:absolute;left:0;right:0;top:230px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.kpi{border-top:2px solid var(--rule);padding-top:22px}
+.kpi .n{font-size:80px;font-weight:300;line-height:1}
+.kpi .d{font-size:21px;color:var(--muted);margin-top:14px;line-height:1.35}
+.gtm{position:absolute;left:0;right:0;top:530px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.g{border:1px solid var(--rule);border-radius:16px;padding:24px 26px;background:rgba(255,255,255,.02)}
+.g .h{font-family:"IBM Plex Mono";font-size:14px;letter-spacing:.14em;color:var(--z4);text-transform:uppercase}
+.g .t{font-size:26px;margin-top:10px}
+.g .d{font-size:18px;color:var(--muted);margin-top:8px;line-height:1.4}
+
+/* ---------- close ---------- */
+#close .c1{position:absolute;left:0;right:0;top:270px;text-align:center}
+#close .c1 .l1{font-size:64px;font-weight:300;color:var(--muted)}
+#close .c1 .l2{font-size:76px;font-weight:300;margin-top:16px}
+#close .c1 .l2 em{font-style:italic;color:var(--z4)}
+#close .team{position:absolute;left:0;right:0;top:520px;text-align:center}
+#close .team .names{font-size:30px;margin-top:16px;font-weight:300;letter-spacing:.01em}
+#close .team .names span{color:var(--faint);margin:0 14px}
+#close .credit{position:absolute;left:0;right:0;bottom:60px;text-align:center;font-size:15px;color:var(--faint);letter-spacing:.06em}
+</style>
+</head>
+<body>
+
+<!-- ================= INTRO (40 s) ================= -->
+<section id="intro">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div class="t1" id="i1">
+      <div class="kicker a" style="animation-delay:.2s">Indradhanu 2026 · AI for Climate Change · SDG 13</div>
+      <div class="logo serif a" style="animation-delay:.5s;margin-top:22px">KAVACH</div>
+      <div class="ramp"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="sub a" style="animation-delay:1.3s">The occupational heat decision engine</div>
+      <div class="kicker team a" style="animation-delay:1.9s;color:var(--faint)">Team Brawlers</div>
+    </div>
+
+    <div class="story" id="i2" style="display:none">
+      <div class="kicker a" style="animation-delay:.1s"><span class="dot"></span>Pune · 20 May · 06:00</div>
+      <div class="big serif a" style="animation-delay:.6s;margin-top:28px">42 workers at the gate of<br>Magarpatta Site 7.</div>
+      <div class="line a" style="animation-delay:2.6s">The forecast says <span class="mono" style="color:var(--z4)">36 °C</span>.</div>
+      <div class="line a" style="animation-delay:4.6s;color:var(--paper)">Can they work today — and until when?</div>
+    </div>
+
+    <div id="i3" style="display:none">
+      <div class="kicker a" style="position:absolute;top:150px;animation-delay:.1s">Why it matters</div>
+      <div class="stats">
+        <div class="stat a" style="animation-delay:.3s"><div class="n serif"><span class="cnt" data-to="380" data-suf="M"></span></div><div class="d">Indians work in outdoor heat</div><div class="s">IECC · EHI-N* policy paper</div></div>
+        <div class="stat a" style="animation-delay:2.6s"><div class="n serif" style="color:var(--z4)">$<span class="cnt" data-to="78" data-suf="B"></span></div><div class="d">in wages lost to heat every year — about 2% of GDP</div><div class="s">IIED · 2026</div></div>
+        <div class="stat a" style="animation-delay:5.2s"><div class="n serif" style="color:var(--danger)">14–32<span style="font-size:40px"> min</span></div><div class="d">to a dangerous core temperature, doing heavy work in the worst zone</div><div class="s">IECC technical report</div></div>
+      </div>
+    </div>
+
+    <div class="story" id="i4" style="display:none">
+      <div class="big serif a" style="animation-delay:.2s">The rules already exist.</div>
+      <div class="line a" style="animation-delay:1.4s">Maharashtra's heat SOP names the hours, the water, the rest.</div>
+      <div class="big serif a" style="animation-delay:3.6s;margin-top:60px;font-size:64px">Nobody follows them — because<br><span class="strike" style="animation-delay:5.4s">safety</span> <em>stopping work looks like losing money.</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STACK (35 s) ================= -->
+<section id="stack">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div id="s1" style="position:absolute;top:110px;left:0;right:0">
+      <div class="kicker a" style="animation-delay:.1s">India's heat stack</div>
+      <div class="h2 serif a" style="animation-delay:.3s;margin-top:14px">Great data. It just <em>stops one step short.</em></div>
+      <div class="ladder">
+        <div class="rung a" style="animation-delay:1.4s"><div class="who serif">IMD<small>India Meteorological Dept.</small></div><div class="q">“Will it be hot in this district?”</div><div class="stop">FORECAST · ADVISORY</div></div>
+        <div class="rung a" style="animation-delay:3.0s"><div class="who serif">SHRAM<small>UC Berkeley IECC · 835 stations</small></div><div class="q">“How dangerous is it right now?”</div><div class="stop">HEAT-STRESS ZONE</div></div>
+        <div class="rung a" style="animation-delay:4.6s"><div class="who serif">CHAITRA<small>ward-level planning</small></div><div class="q">“Which wards are most at risk?”</div><div class="stop">RISK MAP</div></div>
+        <div class="rung a" style="animation-delay:6.2s"><div class="who serif">Heat Action Plans<small>250+ cities</small></div><div class="q">“Avoid outdoor work 12–4 PM.”</div><div class="stop">GENERIC ADVICE</div></div>
+        <div class="rung k a" style="animation-delay:8.4s"><div class="who serif">KAVACH</div><div class="q">“Can <b>this</b> crew work today, when, and what does it cost?”</div><div class="stop">A SAFE SHIFT PLAN ✓</div></div>
+      </div>
+    </div>
+
+    <div id="s2" style="display:none;position:absolute;top:96px;left:0;right:0">
+      <div class="kicker a" style="animation-delay:.1s">What is new here</div>
+      <div class="h2 serif a" style="animation-delay:.3s;margin-top:14px">Most teams stop at a red map. <em>We build the shift.</em></div>
+      <table class="cmp">
+        <tr class="a" style="animation-delay:.6s"><th>The theme asks for</th><th>What most teams submit</th><th>What KAVACH does</th></tr>
+        <tr class="a" style="animation-delay:1.2s"><td>Early warning</td><td>A heat map with red zones</td><td>The <b>exact minute</b> a worker's body crosses 38.5 °C — 12:20, not “it's hot today”</td></tr>
+        <tr class="a" style="animation-delay:2.4s"><td>Health risk</td><td>A heat-index score</td><td>A <b>simulation of the human body</b> to ISO 7933 — core temperature, sweat, time to danger</td></tr>
+        <tr class="a" style="animation-delay:3.6s"><td>Community resilience</td><td>“Avoid 12–4 PM”</td><td>Builds the <b>actual safe shift</b> — and shows it delivers <b>more</b> real work</td></tr>
+        <tr class="a" style="animation-delay:4.8s"><td>Use of AI</td><td>A chatbot on a dashboard</td><td>Nugen's aligned model <b>only phrases</b> the plan in Marathi / Hindi — a <b>fact-lock</b> rejects any invented number</td></tr>
+        <tr class="a" style="animation-delay:6.0s"><td>Scale</td><td>An IoT sensor per site</td><td><b>No hardware.</b> 835 live stations + forecast + land cover · ₹0 per new site</td></tr>
+      </table>
+    </div>
+
+    <div class="bumper" id="s3" style="display:none">
+      <div class="kicker a" style="animation-delay:.1s">Team Brawlers presents</div>
+      <div class="logo serif a" style="animation-delay:.4s;margin-top:18px">KAVACH</div>
+      <div class="ramp" style="width:420px;margin-top:26px;transform-origin:left;animation:grow 1.2s ease .8s both"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="kicker a" style="animation-delay:1.4s;margin-top:28px;color:var(--paper)"><span class="dot"></span>Live demo · real data</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENGINES (30 s) ================= -->
+<section id="engines">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div style="position:absolute;top:100px;left:0;right:0">
+      <div class="kicker a" style="animation-delay:.1s">How it works</div>
+      <div class="h2 serif a" style="animation-delay:.3s;margin-top:14px">Four engines. <em>Zero hardware.</em></div>
+    </div>
+    <div class="flow">
+      <svg width="1296" height="420" style="position:absolute;left:0;top:0;overflow:visible">
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6f695d"/></marker></defs>
+        <g fill="none" stroke="#6f695d" stroke-width="2" marker-end="url(#ar)">
+          <path d="M232 70 C 262 70, 262 150, 290 150" stroke-dasharray="120" stroke-dashoffset="120" style="animation:dash .8s ease 2.4s forwards"/>
+          <path d="M232 210 C 262 210, 262 170, 290 170" stroke-dasharray="120" stroke-dashoffset="120" style="animation:dash .8s ease 2.4s forwards"/>
+          <path d="M232 350 C 262 350, 262 190, 290 190" stroke-dasharray="220" stroke-dashoffset="220" style="animation:dash .8s ease 2.4s forwards"/>
+          <path d="M542 170 L 548 170" />
+          <path d="M540 170 L 552 170" stroke-dasharray="40" stroke-dashoffset="40" style="animation:dash .5s ease 4.6s forwards"/>
+          <path d="M802 170 L 814 170" stroke-dasharray="40" stroke-dashoffset="40" style="animation:dash .5s ease 6.8s forwards"/>
+          <path d="M1064 170 L 1076 170" stroke-dasharray="40" stroke-dashoffset="40" style="animation:dash .5s ease 9s forwards"/>
+        </g>
+      </svg>
+      <div class="node in a" style="left:0;top:20px;animation-delay:.9s"><div class="n">LIVE INPUT</div><div class="t" style="font-size:20px">SHRAM · 835 stations</div></div>
+      <div class="node in a" style="left:0;top:160px;animation-delay:1.3s"><div class="n">FORECAST</div><div class="t" style="font-size:20px">Open-Meteo hourly</div></div>
+      <div class="node in a" style="left:0;top:300px;animation-delay:1.7s"><div class="n">ONE-TIME</div><div class="t" style="font-size:20px">Site GPS + land cover</div></div>
+      <div class="node a" style="left:290px;top:70px;animation-delay:3.0s"><div class="n">ENGINE 1</div><div class="t">Downscaling</div><div class="d">Forecast + live station bias + concrete, canopy, albedo → heat at the gate</div></div>
+      <div class="node hero a" style="left:552px;top:70px;animation-delay:5.2s"><div class="n" style="color:var(--danger)">ENGINE 2</div><div class="t">ISO 7933 body</div><div class="d">Core temperature &amp; sweat, minute by minute. Finds the breach time.</div></div>
+      <div class="node a" style="left:814px;top:70px;animation-delay:7.4s"><div class="n">ENGINE 3</div><div class="t">Shift optimiser</div><div class="d">Searches schedules, drops any that breach, maximises real work under the SOP</div></div>
+      <div class="node ai a" style="left:1076px;top:70px;width:230px;animation-delay:9.6s"><div class="n" style="color:var(--safe)">ENGINE 4 · NUGEN</div><div class="t">Briefing</div><div class="d">Aligned model phrases it in Marathi / Hindi. Fact-lock checks every number.</div></div>
+      <div class="a" style="position:absolute;left:290px;top:300px;width:1016px;animation-delay:11.8s;display:flex;align-items:center;gap:18px;font-size:22px;color:#d8d3c7">
+        <span class="mono" style="color:var(--safe)">→</span> 05:30 voice briefing to the supervisor <span class="mono" style="color:var(--faint)">·</span> one-tap confirm <span class="mono" style="color:var(--faint)">·</span> compliance ledger
+      </div>
+    </div>
+    <div class="chips">
+      <div class="chip a" style="animation-delay:14s"><b>0</b> sensors or wearables</div>
+      <div class="chip a" style="animation-delay:15s">EHI fit vs SHRAM · <b>RMSE 1.17</b></div>
+      <div class="chip a" style="animation-delay:16s"><b>89.9%</b> exact zone agreement</div>
+      <div class="chip a" style="animation-delay:17s">Works <b>offline</b> from a cached snapshot</div>
+      <div class="chip a" style="animation-delay:18s">AI <b>never</b> decides the schedule</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IMPACT (30 s) ================= -->
+<section id="impact">
+  <div class="grain"></div>
+  <div class="wrap">
+    <div style="position:absolute;top:100px;left:0;right:0">
+      <div class="kicker a" style="animation-delay:.1s">Impact &amp; scale</div>
+      <div class="h2 serif a" style="animation-delay:.3s;margin-top:14px">Adding a site means <em>typing coordinates.</em></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi a" style="animation-delay:1.2s"><div class="n serif"><span class="cnt" data-to="835"></span></div><div class="d">live stations — every district SHRAM covers, from day one</div></div>
+      <div class="kpi a" style="animation-delay:2.6s"><div class="n serif" style="color:var(--safe)">₹0</div><div class="d">marginal cost per new work site — no hardware to ship</div></div>
+      <div class="kpi a" style="animation-delay:4.0s"><div class="n serif" style="color:var(--z4)">+<span class="cnt" data-to="25" data-suf="%"></span></div><div class="d">more real labour, with breaches cut 2 → 0 (Magarpatta, heatwave day)</div></div>
+      <div class="kpi a" style="animation-delay:5.4s"><div class="n serif">10<span style="font-size:36px"> s</span></div><div class="d">of supervisor time — listen, press 1, done</div></div>
+    </div>
+    <div class="gtm">
+      <div class="g a" style="animation-delay:8s"><div class="h">B2G</div><div class="t">Labour departments</div><div class="d">An auditable SOP-compliance ledger: who was briefed, when, and whether they confirmed.</div></div>
+      <div class="g a" style="animation-delay:10s"><div class="h">B2B</div><div class="t">Contractors &amp; gig platforms</div><div class="d">More real work from the same day. Safety stops being a cost line.</div></div>
+      <div class="g a" style="animation-delay:12s"><div class="h">Public good</div><div class="t">NREGA worksites</div><div class="d">Free. Climate adaptation for the people least responsible and most exposed.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSE (15 s) ================= -->
+<section id="close">
+  <div class="grain"></div>
+  <div class="c1">
+    <div class="l1 serif a" style="animation-delay:.3s">India has the heat data.</div>
+    <div class="l2 serif a" style="animation-delay:1.8s">KAVACH makes the <em>heat decision.</em></div>
+  </div>
+  <div class="team">
+    <div class="ramp a" style="width:300px;margin:0 auto;animation-delay:3.6s"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="kicker a" style="animation-delay:4s;margin-top:34px">Team Brawlers</div>
+    <div class="names a" style="animation-delay:4.6s">Aadi Joshi<span>·</span>Atharva Gilbile<span>·</span>Hasan Rupawalla<span>·</span>Tanvesh Deshmukh</div>
+  </div>
+  <div class="credit a" style="animation-delay:6s">Built on SHRAM (UC Berkeley IECC) · Open-Meteo · ISO 7933 · Nugen aligned models · Indradhanu 2026, PCCOE Pune</div>
+</section>
+
+<script>
+const scene = (location.hash || "#intro").slice(1);
+document.getElementById(scene).classList.add("on");
+function count(el){const to=+el.dataset.to,suf=el.dataset.suf||"";const d=1400,t0=performance.now();
+  (function f(t){const k=Math.min(1,(t-t0)/d);const e=1-Math.pow(1-k,3);el.textContent=Math.round(to*e)+suf;if(k<1)requestAnimationFrame(f)})(t0);}
+function arm(root){root.querySelectorAll(".cnt").forEach(el=>{el.textContent="0"+(el.dataset.suf||"");const p=el.closest(".a");const dl=p?parseFloat(p.style.animationDelay)||0:0;setTimeout(()=>count(el),dl*1000+200)})}
+function swap(a,b,at){setTimeout(()=>{const A=document.getElementById(a);A.classList.add("o");setTimeout(()=>{A.style.display="none";const B=document.getElementById(b);B.style.display="";arm(B)},700)},at*1000)}
+window.__start = () => {
+  if(scene==="intro"){swap("i1","i2",6.5);swap("i2","i3",16);swap("i3","i4",29.5)}
+  if(scene==="stack"){swap("s1","s2",16.5);swap("s2","s3",30.5)}
+  if(scene==="impact"||scene==="engines"){arm(document.getElementById(scene))}
+};
+</script>
+</body>
+</html>

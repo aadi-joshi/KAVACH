@@ -98,7 +98,8 @@ At the very heaviest work intensity, on that same day, the honest answer flips: 
 safe schedule delivers **less** (53 → 37 labour-hours). Some days genuinely cannot
 deliver eight hours of very heavy outdoor labour. KAVACH says so on screen instead
 of quietly rigging the comparison — and then shows the way out, because dropping the
-work intensity one step turns that −30% into +233%.
+work intensity one step (MET 6 → MET 5) already turns that −30% into +75% (42 → 74
+labour-hours), and two steps (MET 4) gives +233%.
 
 A safety tool that only ever produces good news is not a safety tool.
 
@@ -842,7 +843,7 @@ and reads it out in Marathi. No hardware anywhere."*
 > It is the opposite. At the heaviest work intensity, some days genuinely cannot
 > deliver eight safe hours. A tool that only ever produced good news would be useless
 > as a safety tool. We report the trade-off and show the recovery path — one step down
-> in work intensity turns −30% into +233% on the same day.
+> in work intensity turns −30% into +75%, two steps into +233%, on the same day.
 
 **"Couldn't you inflate the productivity gain by scheduling longer days?"**
 > You could, which is why we capped it. Total scheduled time is limited to the

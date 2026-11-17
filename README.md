@@ -9,7 +9,7 @@ Built for the **Indradhanu 2026 International Grand Challenge**, PCCOE Pune. The
 Climate Change (UN SDG 13). Domain: disaster resilience, public health and community
 well-being.
 
-**Demo video:** _link to be added_
+**Demo video:** _link to be added_ · script: [docs/VIDEO_SCRIPT.md](docs/VIDEO_SCRIPT.md) · recorder: [`video/`](video/)
 
 | Read this | For |
 |---|---|
